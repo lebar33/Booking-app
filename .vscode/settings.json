@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "editor.formatOnSave": true,
+    "prettier.endOfLine": "auto",
+    "prettier.enable": false
+}

@@ -1,0 +1,78 @@
+###
+GET http://localhost:5000/api/rooms
+
+
+###
+POST http://localhost:5000/api/rooms
+Content-Type: application/json
+
+{
+    "name": "test room 5",
+    "price": 500,
+    "desc": "some description",
+    "roomNumbers": [{
+        "number": 101,
+        "unavailableDates": ["2024-10-26", "2024-10-28"]
+    }]
+}
+
+#get single room
+###
+GET http://localhost:5000/api/rooms/671cc69beccdb76fea998cb9
+
+#updated room
+###
+PUT http://localhost:5000/api/rooms/671cbae908537733b7f862ee
+Content-Type: application/json
+
+{
+    "name": "test room 3",
+    "price": 12300,
+    "desc": "Xoa",
+    "roomNumbers": [{
+        "number": 99,
+        "unavailableDates": ["2024-10-25", "2024-10-24"]
+    }]
+}
+
+#delte room
+###
+
+DELETE http://localhost:5000/api/rooms/671cbae908537733b7f862ee
+
+#--------------------------------------------
+##Get bookings
+###
+GET http://localhost:5000/api/bookings
+
+#Create booking
+###
+POST http://localhost:5000/api/bookings
+Content-Type: application/json
+
+{
+    "roomId": "671cc69beccdb76fea998cb9",
+    "name": "Msbreezce",
+    "email": "Msbreezce@gmail.com",
+    "checkInDate": "2024-10-24", 
+    "checkOutDate": "2024-10-25" 
+}
+
+#update boking
+###
+PUT http://localhost:5000/api/bookings/671cd4c26e066aacfb8e85cb
+Content-Type: application/json
+
+{
+    "name": "Thien",
+    "email": "thien@gmail.com"
+}
+
+#delete boking
+###
+DELETE http://localhost:5000/api/bookings/671cda1e4d19795014d93e64
+
+##Get single booking
+###
+GET http://localhost:5000/api/bookings/671cd5fb84d4816b66d553e7
+
