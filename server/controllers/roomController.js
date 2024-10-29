@@ -1,7 +1,7 @@
 const Room = require("../models/roomModel");
 
 // roomController.js
-const getRooms = async (req, res) => {
+const getRooms = async (req, res, next) => {
     try {
         const rooms = await Room.find();
         if (!rooms) {
@@ -10,7 +10,7 @@ const getRooms = async (req, res) => {
         }
         return res.status(200).json(rooms);
     } catch (error) {
-        next(error)
+        next(error);
     }
 };
 
