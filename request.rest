@@ -76,3 +76,29 @@ DELETE http://localhost:5000/api/bookings/671cda1e4d19795014d93e64
 ###
 GET http://localhost:5000/api/bookings/671cd5fb84d4816b66d553e7
 
+#create users 
+### 
+POST http://localhost:5000/api/users 
+Content-Type: application/json
+
+{
+"name": "Hekki", "email": "123@gmail.com", "password": "123"
+}
+
+#login user 
+### 
+POST http://localhost:5000/api/users/login 
+Content-Type: application/json
+
+{
+"email": "123@gmail.com", "password": "123"
+}
+
+#logout user 
+### 
+GET http://localhost:5000/api/users/logout
+
+#------------------- 
+#check auth
+### 
+GET http://localhost:5000/auth

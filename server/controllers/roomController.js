@@ -22,6 +22,8 @@ const getRoom = async (req, res, next) => {
             res.status(400);
             throw new Error("Room not found!");
         }
+
+        const rooms = await Room.find();
         return res.status(200).json(room);
     } catch (error) {
         next(error);
