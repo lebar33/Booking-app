@@ -7,7 +7,7 @@ POST http://localhost:5000/api/rooms
 Content-Type: application/json
 
 {
-    "name": "test room 5",
+    "name": "test room 6",
     "price": 500,
     "desc": "some description",
     "roomNumbers": [{
@@ -18,17 +18,17 @@ Content-Type: application/json
 
 #get single room
 ###
-GET http://localhost:5000/api/rooms/671cc69beccdb76fea998cb9
+GET http://localhost:5000/api/rooms/67205d83c0d385e542191c44
 
 #updated room
 ###
-PUT http://localhost:5000/api/rooms/671cbae908537733b7f862ee
+PUT http://localhost:5000/api/rooms/67205d83c0d385e542191c44
 Content-Type: application/json
 
 {
     "name": "test room 3",
     "price": 12300,
-    "desc": "Xoa",
+    "desc": "Sua",
     "roomNumbers": [{
         "number": 99,
         "unavailableDates": ["2024-10-25", "2024-10-24"]
@@ -38,7 +38,7 @@ Content-Type: application/json
 #delte room
 ###
 
-DELETE http://localhost:5000/api/rooms/671cbae908537733b7f862ee
+DELETE http://localhost:5000/api/rooms/67205d83c0d385e542191c44
 
 #--------------------------------------------
 ##Get bookings
@@ -60,7 +60,7 @@ Content-Type: application/json
 
 #update boking
 ###
-PUT http://localhost:5000/api/bookings/671cd4c26e066aacfb8e85cb
+PUT http://localhost:5000/api/bookings/67205dfac0d385e542191c64
 Content-Type: application/json
 
 {
@@ -74,5 +74,32 @@ DELETE http://localhost:5000/api/bookings/671cda1e4d19795014d93e64
 
 ##Get single booking
 ###
-GET http://localhost:5000/api/bookings/671cd5fb84d4816b66d553e7
+GET http://localhost:5000/api/bookings/67205e7cc0d385e542191c6f
 
+//
+#create users 
+### 
+POST http://localhost:5000/api/users 
+Content-Type: application/json
+
+{
+"name": "Hekki", "email": "123@gmail.com", "password": "123"
+}
+
+#login user 
+### 
+POST http://localhost:5000/api/users/login 
+Content-Type: application/json
+
+{
+"email": "123@gmail.com", "password": "123"
+}
+
+#logout user 
+### 
+GET http://localhost:5000/api/users/logout
+
+#------------------- 
+#check auth
+### 
+GET http://localhost:5000/auth
