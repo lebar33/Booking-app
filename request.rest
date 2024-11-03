@@ -76,7 +76,10 @@ DELETE http://localhost:5000/api/bookings/671cda1e4d19795014d93e64
 ###
 GET http://localhost:5000/api/bookings/67205e7cc0d385e542191c6f
 
+<<<<<<< HEAD
 //
+=======
+>>>>>>> a51f8632b2e60b67226991da3055d9deaf7d5a17
 #create users 
 ### 
 POST http://localhost:5000/api/users 

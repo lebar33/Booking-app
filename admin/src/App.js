@@ -5,6 +5,9 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Header from "./component/Header/Header";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import CreateRoom from "./Pages/CreateRoom";
+import Room from "./Pages/Room/Room";
+import Rooms from "./Pages/Rooms/Rooms";
 
 
 function App() {
@@ -13,14 +16,15 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />}>
-          </Route>
-          <Route path="/login" element={<Login />}>
-          </Route>
-          <Route path="/register" element={<Register />}>
-          </Route>
-          <Route path="/dashboard" element={<Dashboard />}>
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/rooms/create" element={<CreateRoom />} />
+          <Route path="/rooms/all/:id" element={<Room />} />
+
+
         </Routes>
       </Router>
     </div>
